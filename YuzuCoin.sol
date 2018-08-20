@@ -312,4 +312,5 @@ contract YuzuCoin is StandardToken {
     return balanceOf(msg.sender);
   }
 
+
 }
