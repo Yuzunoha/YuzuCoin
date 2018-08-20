@@ -294,3 +294,22 @@ contract StandardToken is ERC20 {
     _burn(_account, _amount);
   }
 }
+
+// 独自のERC20トークン
+contract YuzuCoin is StandardToken {
+  string public constant name = "YuzuCoin";
+  string public constant symbol = "YZC";
+  uint8 public constant decimals = 18;
+  uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(decimals));
+
+  // コンストラクタ
+  constructor() public {
+    _mint(msg.sender, INITIAL_SUPPLY);
+  }
+
+  // msg.senderの残高を取得
+  function getMyBalance() public view returns(uint) {
+    return balanceOf(msg.sender);
+  }
+
+}
