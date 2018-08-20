@@ -300,7 +300,7 @@ contract YuzuCoin is StandardToken {
   string public constant name = "YuzuCoin";
   string public constant symbol = "YZC";
   uint8 public constant decimals = 18;
-  uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(decimals));
+  uint256 public constant INITIAL_SUPPLY = 100000000 * (10 ** uint256(decimals));
 
   // コンストラクタ
   constructor() public {
@@ -311,6 +311,4 @@ contract YuzuCoin is StandardToken {
   function getMyBalance() public view returns(uint) {
     return balanceOf(msg.sender);
   }
-
-
 }
